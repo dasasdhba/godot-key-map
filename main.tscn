@@ -1,9 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://culb4qeniie05"]
 
-[ext_resource type="Script" path="res://scripts/main.gd" id="1_j4h6h"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_eaod0"]
 [ext_resource type="PackedScene" uid="uid://cbpcn3kapkbaw" path="res://buttons/mf.tscn" id="2_xor8k"]
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_j4h6h")
+script = ExtResource("1_eaod0")
+background_color = Color(1, 0, 1, 1)
 
 [node name="MF" parent="." instance=ExtResource("2_xor8k")]
+position = Vector2(64, 80)

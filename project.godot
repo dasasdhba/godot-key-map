@@ -27,9 +27,9 @@ gdscript/warnings/unused_signal=0
 
 [display]
 
-window/size/viewport_width=160
-window/size/viewport_height=64
-window/size/always_on_top=true
+window/size/viewport_width=256
+window/size/viewport_height=128
+window/size/resizable=false
 
 [dotnet]
 
