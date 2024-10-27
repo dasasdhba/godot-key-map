@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://culb4qeniie05"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_j4h6h"]
+[ext_resource type="PackedScene" uid="uid://i4umawx5j5ng" path="res://buttons/button_space.tscn" id="2_qm45r"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_j4h6h")
+
+[node name="Button" parent="." instance=ExtResource("2_qm45r")]
+position = Vector2(160, 112)
