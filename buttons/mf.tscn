@@ -1,0 +1,127 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbpcn3kapkbaw"]
+
+[ext_resource type="Script" path="res://scripts/button.gd" id="1_rsanm"]
+[ext_resource type="SpriteFrames" uid="uid://113f0kg246xj" path="res://sprites/mf/mf.tres" id="2_w3ik2"]
+
+[node name="MF" type="Node2D"]
+position = Vector2(16, 48)
+
+[node name="Z" type="Node2D" parent="." node_paths=PackedStringArray("general_item", "pressed_item")]
+script = ExtResource("1_rsanm")
+monitor_key = 90
+general_item = NodePath("General")
+pressed_item = NodePath("Pressed")
+metadata/_edit_group_ = true
+
+[node name="General" type="AnimatedSprite2D" parent="Z"]
+sprite_frames = ExtResource("2_w3ik2")
+animation = &"ZGeneral"
+frame_progress = 0.0513341
+
+[node name="Pressed" type="AnimatedSprite2D" parent="Z"]
+sprite_frames = ExtResource("2_w3ik2")
+animation = &"ZPressed"
+frame_progress = 0.0513341
+
+[node name="X" type="Node2D" parent="." node_paths=PackedStringArray("general_item", "pressed_item")]
+position = Vector2(32, 0)
+script = ExtResource("1_rsanm")
+monitor_key = 88
+general_item = NodePath("General")
+pressed_item = NodePath("Pressed")
+metadata/_edit_group_ = true
+
+[node name="General" type="AnimatedSprite2D" parent="X"]
+sprite_frames = ExtResource("2_w3ik2")
+animation = &"XGeneral"
+frame_progress = 0.518477
+
+[node name="Pressed" type="AnimatedSprite2D" parent="X"]
+sprite_frames = ExtResource("2_w3ik2")
+animation = &"XPressed"
+frame_progress = 0.102672
+
+[node name="Left" type="Node2D" parent="." node_paths=PackedStringArray("general_item", "pressed_item")]
+position = Vector2(64, 0)
+script = ExtResource("1_rsanm")
+monitor_key = 4194319
+general_item = NodePath("General")
+pressed_item = NodePath("Pressed")
+metadata/_edit_group_ = true
+
+[node name="General" type="AnimatedSprite2D" parent="Left"]
+sprite_frames = ExtResource("2_w3ik2")
+animation = &"LeftGeneral"
+frame_progress = 0.225082
+
+[node name="Pressed" type="AnimatedSprite2D" parent="Left"]
+sprite_frames = ExtResource("2_w3ik2")
+animation = &"LeftPressed"
+frame_progress = 0.585243
+
+[node name="Down" type="Node2D" parent="." node_paths=PackedStringArray("general_item", "pressed_item")]
+position = Vector2(96, 0)
+script = ExtResource("1_rsanm")
+monitor_key = 4194322
+general_item = NodePath("General")
+pressed_item = NodePath("Pressed")
+metadata/_edit_group_ = true
+
+[node name="General" type="AnimatedSprite2D" parent="Down"]
+sprite_frames = ExtResource("2_w3ik2")
+animation = &"DownGeneral"
+frame_progress = 0.666348
+
+[node name="Pressed" type="AnimatedSprite2D" parent="Down"]
+sprite_frames = ExtResource("2_w3ik2")
+animation = &"DownPressed"
+frame_progress = 0.814175
+
+[node name="Right" type="Node2D" parent="." node_paths=PackedStringArray("general_item", "pressed_item")]
+position = Vector2(128, 0)
+script = ExtResource("1_rsanm")
+monitor_key = 4194321
+general_item = NodePath("General")
+pressed_item = NodePath("Pressed")
+metadata/_edit_group_ = true
+
+[node name="General" type="AnimatedSprite2D" parent="Right"]
+sprite_frames = ExtResource("2_w3ik2")
+animation = &"RightGeneral"
+frame_progress = 0.0692779
+
+[node name="Pressed" type="AnimatedSprite2D" parent="Right"]
+sprite_frames = ExtResource("2_w3ik2")
+animation = &"RightPressed"
+frame_progress = 0.858849
+
+[node name="Up" type="Node2D" parent="." node_paths=PackedStringArray("general_item", "pressed_item")]
+position = Vector2(96, -32)
+script = ExtResource("1_rsanm")
+monitor_key = 4194320
+general_item = NodePath("General")
+pressed_item = NodePath("Pressed")
+metadata/_edit_group_ = true
+
+[node name="General" type="AnimatedSprite2D" parent="Up"]
+sprite_frames = ExtResource("2_w3ik2")
+animation = &"UpGeneral"
+frame_progress = 0.558639
+
+[node name="Pressed" type="AnimatedSprite2D" parent="Up"]
+sprite_frames = ExtResource("2_w3ik2")
+animation = &"UpPressed"
+frame_progress = 0.808876
+
+[connection signal="ready" from="Z/General" to="Z/General" method="play"]
+[connection signal="ready" from="Z/Pressed" to="Z/Pressed" method="play"]
+[connection signal="ready" from="X/General" to="X/General" method="play"]
+[connection signal="ready" from="X/Pressed" to="X/Pressed" method="play"]
+[connection signal="ready" from="Left/General" to="Left/General" method="play"]
+[connection signal="ready" from="Left/Pressed" to="Left/Pressed" method="play"]
+[connection signal="ready" from="Down/General" to="Down/General" method="play"]
+[connection signal="ready" from="Down/Pressed" to="Down/Pressed" method="play"]
+[connection signal="ready" from="Right/General" to="Right/General" method="play"]
+[connection signal="ready" from="Right/Pressed" to="Right/Pressed" method="play"]
+[connection signal="ready" from="Up/General" to="Up/General" method="play"]
+[connection signal="ready" from="Up/Pressed" to="Up/Pressed" method="play"]

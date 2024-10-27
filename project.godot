@@ -27,8 +27,8 @@ gdscript/warnings/unused_signal=0
 
 [display]
 
-window/size/viewport_width=320
-window/size/viewport_height=224
+window/size/viewport_width=160
+window/size/viewport_height=64
 window/size/always_on_top=true
 
 [dotnet]
@@ -42,5 +42,6 @@ enabled=PackedStringArray("res://addons/global_input/plugin.cfg")
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-renderer/rendering_method="mobile"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
 2d/snap/snap_2d_transforms_to_pixel=true

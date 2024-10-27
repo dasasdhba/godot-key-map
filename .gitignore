@@ -4,3 +4,8 @@
 
 # ide
 .idea/
+
+# build
+build/
+export_presets.cfg
+build_profile.build
